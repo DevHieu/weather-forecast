@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.app {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e873af, #b06fd4, #595ff5);
+  .wrapper {
+    width: 50em;
+    height: 35em;
+    border-radius: 20px;
+    background-color: #fff;
+    .header {
+      background-image: url(https://wallpaperaccess.com/full/837256.jpg);
+      background-repeat: no-repeat;
+      background-size: 50em;
+      border-radius: 20px 20px 0 0;
+      color: #fff;
+      padding-bottom: 2em;
+      .inputBox {
+        width: 30em;
+        height: 3em;
+        border: none;
+        border-radius: 0 0 15px 15px;
+        outline: none;
+        text-align: center;
+        background: #fff;
+        font-size: 15px;
+      }
+      .headerBody {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2em;
+        .headerLeft {
+          margin-left: 2em;
+          .temp {
+            margin-bottom: 0.3em;
+            font-weight: 600;
+            transform: translateX(0.2em);
+            font-size: 50px;
+          }
+          .weatherIcon {
+            font-size: 40px;
+            align-items: center;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            margin-bottom: 0.5em;
+          }
+          .weather {
+            font-size: 40px;
+            font-weight: 500;
+            margin-bottom: 0.4em;
+          }
+        }
+      }
+      .headerRight {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 6em;
+        .city {
+          font-size: 3.5em;
+          font-weight: 500;
+          position: absolute;
+          transform: translate(3em, -2em);
+          max-width: 8em;
+        }
+      }
+    }
+    .footer {
+      display: flex;
+      align-content: center;
+      justify-content: space-between;
+      align-items: center;
+      margin: 3.5em;
+      .footerItem {
+        margin-bottom: 1.5em;
+      }
+      .fotterIcon {
+        font-size: 30px;
+      }
+    }
+  }
+}
