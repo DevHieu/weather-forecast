@@ -7,6 +7,7 @@ import {
   BsCloudSnow,
   BsSun,
 } from "react-icons/bs";
+import { API_URL, API_KEY } from "./api/api";
 import style from "./App.module.scss";
 
 function App() {
@@ -23,16 +24,11 @@ function App() {
   const [icon, setIcon] = useState(<BsSun />);
   const [query, setQuery] = useState("Long Thành");
 
-  const API_URL = "https://api.openweathermap.org/data/2.5/weather/";
-  const API_KEY = "b96d7c571ab235ab040c28e2be03e6f4";
+  // const API_URL = "https://api.openweathermap.org/data/2.5/weather/";
+  // const API_KEY = "your api key";
 
   useEffect(() => {
     const fetchData = async () => {
-      // navigator.geolocation.getCurrentPosition((position) => {
-      //   setLat(position.coords.latitude);
-      //   setLong(position.coords.longitude);
-      // });
-
       await fetch(`${API_URL}?q=${query}&appid=${API_KEY}`)
         .then((res) => res.json())
         .then((result) => {
@@ -51,8 +47,6 @@ function App() {
         });
     };
     fetchData();
-
-    // ${API_URL}?q=${query}&limit=5&appid=${API_KEY}
 
     switch (weather) {
       case "Clear":
