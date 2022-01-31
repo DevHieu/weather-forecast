@@ -11,8 +11,6 @@ import { API_URL, API_KEY } from "./api/api";
 import style from "./App.module.scss";
 
 function App() {
-  // const [lat, setLat] = useState([]);
-  // const [long, setLong] = useState([]);
   const [city, setCity] = useState("");
   const [data, setData] = useState([]);
   const [temp, setTemp] = useState("");
@@ -23,9 +21,6 @@ function App() {
   const [weather, setWeather] = useState("");
   const [icon, setIcon] = useState(<BsSun />);
   const [query, setQuery] = useState("Long Thành");
-
-  // const API_URL = "https://api.openweathermap.org/data/2.5/weather/";
-  // const API_KEY = "your api key";
 
   useEffect(() => {
     const fetchData = async () => {
